@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AutoCompleteEntry.MainPage"
+             xmlns:control="clr-namespace:dotMorten.Xamarin.Forms;assembly=dotMorten.Xamarin.Forms.AutoSuggestBox"
+             Padding="20">
+
+    <StackLayout>
+
+        <Label Text="Please enter a country name:"/>
+
+        <control:AutoSuggestBox x:Name="contryEntry" PlaceholderText="Please write here..."
+                                TextChanged="contryEntry_TextChanged" QuerySubmitted="contryEntry_QuerySubmitted"/>
+
+        <Label x:Name="displayCountry" TextColor="Blue" FontSize="Large"/>
+
+    </StackLayout>
+
+</ContentPage>
